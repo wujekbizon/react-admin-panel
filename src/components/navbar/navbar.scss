@@ -19,6 +19,7 @@
     .topLeft {
       display: flex;
       align-items: center;
+
       .logoContainer {
         border: 1px solid rgba(255, 255, 255, 0.7);
         border-radius: 5px;
@@ -34,6 +35,7 @@
       .textLeft {
         font-size: 30px;
         font-weight: 300;
+        // color: $logoColor;
       }
     }
 

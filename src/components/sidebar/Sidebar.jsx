@@ -12,6 +12,7 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
 import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (

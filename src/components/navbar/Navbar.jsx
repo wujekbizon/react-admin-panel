@@ -5,6 +5,7 @@ import Badge from '@mui/material/Badge';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import LanguageIcon from '@mui/icons-material/Language';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -12,7 +13,9 @@ const Navbar = () => {
       <div className="topWrapper">
         <div className="topLeft">
           <div className="logoContainer">
-            <img src={logo} alt="" />
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
           </div>
           <span className="textLeft">ADMIN PANEL</span>
         </div>
