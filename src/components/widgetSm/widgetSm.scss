@@ -48,16 +48,21 @@
       .button {
         display: flex;
         align-items: center;
-        padding: 7px 10px;
+        padding: 5px 10px;
         background-color: $navColor;
         border: 1px solid $borderColor;
         border-radius: 5px;
         color: $textColor;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $sidebarColor;
+        }
 
         .icon {
           font-size: 16px;
           margin-right: 5px;
-          color: black;
+          color: white;
         }
       }
     }

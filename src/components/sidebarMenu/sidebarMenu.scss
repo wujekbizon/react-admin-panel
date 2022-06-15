@@ -18,10 +18,13 @@
       display: flex;
       align-items: center;
       border-radius: 10px;
+      border: 1px solid $sidebarColor;
+      margin: 1px 0px;
 
       &.active,
       &:hover {
         background-color: $navColor;
+        border: 1px solid $borderColor;
       }
     }
   }

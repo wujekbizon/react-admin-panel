@@ -6,6 +6,10 @@
   border: 1px solid $borderColor;
   border-radius: 5px;
   color: $textColor;
+
+  &:hover {
+    background-color: $sidebarColor;
+  }
 }
 
 .widgetLg {
@@ -51,10 +55,18 @@
 
       .Approved {
         background-color: green;
+
+        &:hover {
+          background-color: #238636;
+        }
       }
 
       .Declined {
         background-color: red;
+
+        &:hover {
+          background-color: rgb(233, 34, 34);
+        }
       }
     }
   }
