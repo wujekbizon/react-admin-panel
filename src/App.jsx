@@ -1,13 +1,14 @@
 import './app.scss';
 import Navbar from './components/navbar/Navbar';
 import Sidebar from './components/sidebar/Sidebar';
+import Home from './pages/home/Home';
 const App = () => {
   return (
     <div>
       <Navbar />
       <div className="container">
         <Sidebar />
-        <div className="other">Other pages</div>
+        <Home />
       </div>
     </div>
   );
