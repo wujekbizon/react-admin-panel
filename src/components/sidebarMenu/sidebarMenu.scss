@@ -1,0 +1,28 @@
+@import '../../global.scss';
+
+.title {
+  font-size: 15px;
+  color: #8b949e;
+}
+
+.menu {
+  margin-bottom: 10px;
+
+  .list {
+    list-style: none;
+    padding: 5px;
+
+    .item {
+      padding: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+
+      &.active,
+      &:hover {
+        background-color: $navColor;
+      }
+    }
+  }
+}
