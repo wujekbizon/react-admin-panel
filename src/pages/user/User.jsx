@@ -101,7 +101,7 @@ const User = () => {
               <div className="updateItem">
                 <label htmlFor="email">Email</label>
                 <input
-                  type="text"
+                  type="email"
                   id="email"
                   placeholder="annabeck99@gmail.com"
                   className="updateInput"
