@@ -12,7 +12,6 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
 import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
-import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -20,6 +19,7 @@ const Sidebar = () => {
       <div className="wrapper">
         <SidebarMenu
           title="Dashboard"
+          isActive
           item1={'Home'}
           item1Icon={<LineStyleOutlinedIcon className="sidebarIcon" />}
           item2={'Analytics'}
@@ -27,8 +27,10 @@ const Sidebar = () => {
           item3={'Sales'}
           item3Icon={<TrendingUpOutlinedIcon className="sidebarIcon" />}
         />
+
         <SidebarMenu
           title="Quick Menu"
+          isActive={false}
           item1={'Users'}
           item1Icon={<PersonOutlineOutlinedIcon className="sidebarIcon" />}
           item2={'Products'}
@@ -38,8 +40,10 @@ const Sidebar = () => {
           item4={'Reports'}
           item4Icon={<BarChartIcon className="sidebarIcon" />}
         />
+
         <SidebarMenu
           title="Notifications"
+          isActive={false}
           item1={'Mail'}
           item1Icon={<MailOutlinedIcon className="sidebarIcon" />}
           item2={'Feedback'}
@@ -49,6 +53,7 @@ const Sidebar = () => {
         />
         <SidebarMenu
           title="Staff"
+          isActive={false}
           item1={'Manage'}
           item1Icon={<WorkOutlineOutlinedIcon className="sidebarIcon" />}
           item2={'Analytics'}
