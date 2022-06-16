@@ -7,6 +7,7 @@ import User from './pages/user/User';
 import ProductList from './pages/productList/ProductList';
 import NewUser from './pages/newUser/NewUser';
 import Product from './pages/product/Product';
+import NewProduct from './pages/newProduct/NewProduct';
 import { Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
           <Route path="/newUser" element={<NewUser />} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/product/:productId" element={<Product />} />
-          <Route path="/newproduct" element={<ProductList />} />
+          <Route path="/newproduct" element={<NewProduct />} />
         </Routes>
       </div>
     </div>
