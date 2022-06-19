@@ -129,7 +129,7 @@ const User = () => {
                 </label>
                 <input type="file" id="file" style={{ display: 'none' }} />
               </div>
-              <button className="updateBtn" onSubmit={handleSubmit}>
+              <button className="updateBtn" onClick={handleSubmit}>
                 Update
               </button>
             </div>

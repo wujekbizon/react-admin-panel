@@ -28,11 +28,7 @@ const ProductList = () => {
       },
     },
     { field: 'stock', headerName: 'Stock', width: 200 },
-    {
-      field: 'status',
-      headerName: 'Status',
-      width: 150,
-    },
+
     {
       field: 'price',
       headerName: 'Price',
@@ -63,16 +59,13 @@ const ProductList = () => {
   return (
     <div className="productList">
       <DataGrid
+        className="dataGrid"
         rows={data}
         columns={columns}
         pageSize={10}
         rowsPerPageOptions={[5]}
         checkboxSelection
         disableSelectionOnClick
-        style={{
-          color: 'white',
-          border: '1px solid #30363d',
-        }}
       />
     </div>
   );

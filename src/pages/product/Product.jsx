@@ -1,10 +1,14 @@
 import './product.scss';
 import { Link } from 'react-router-dom';
 import Chart from '../../components/chart/Chart';
-import { productData } from '../../dummyData';
+import { productData, productRows } from '../../dummyData';
 import PublishOutlinedIcon from '@mui/icons-material/PublishOutlined';
 
 const Product = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
+  console.log(productRows);
   return (
     <div className="product">
       <div className="titleContainer">
@@ -75,7 +79,9 @@ const Product = () => {
               </label>
               <input type="file" id="file" style={{ display: 'none' }} />
             </div>
-            <button className="productButton">Update</button>
+            <button className="productButton" onClick={handleClick}>
+              Update
+            </button>
           </div>
         </form>
       </div>

@@ -32,7 +32,7 @@ const NewProduct = () => {
           </label>
           <input type="file" id="file" style={{ display: 'none' }} />
         </div>
-        <button className="addProductButton" onSubmit={handleSubmit}>
+        <button className="addProductButton" onClick={handleSubmit}>
           Create
         </button>
       </form>
