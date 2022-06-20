@@ -13,6 +13,11 @@ const Login = () => {
 
   return (
     <div className="loginAdmin">
+      <div className="loginAdminTitle">
+        <h1 className="title">Administrator Login Page</h1>
+        <span>Login page authentication is disabled just click login :)</span>
+      </div>
+
       <input
         type="text"
         placeholder="username"
