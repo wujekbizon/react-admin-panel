@@ -35,7 +35,7 @@
       .textLeft {
         font-size: 30px;
         font-weight: 300;
-        // color: $logoColor;
+        color: $logoColor;
       }
     }
 
@@ -55,7 +55,21 @@
         border-radius: 50%;
         object-fit: cover;
         border: 1px solid $textColor;
+      }
+
+      .logout {
+        padding: 5px 10px;
+        background-color: $mainColor;
+        color: $textColor;
+        border: 1px solid $sidebarColor;
+        margin-left: 20px;
+        border-radius: 5px;
         cursor: pointer;
+
+        &:hover {
+          background-color: $sidebarColor;
+          color: red;
+        }
       }
     }
   }

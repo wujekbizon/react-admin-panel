@@ -11,21 +11,33 @@ import Product from './pages/product/Product';
 import NewProduct from './pages/newProduct/NewProduct';
 import Login from './pages/login/Login';
 import { Routes, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 const App = () => {
+  const user = useSelector((state) => state.user.currentUser);
+
   return (
-    <div>
-      <Navbar />
+    <div className="app">
+      {user ? <Navbar /> : ''}
       <div className="container">
-        <Sidebar />
+        {user ? <Sidebar /> : ''}
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route
+            path="/"
+            exact
+            element={user ? <Home /> : <Navigate to="/login" />}
+          />
           <Route path="/users" element={<UserList />} />
           <Route path="/user/:userId" element={<User />} />
           <Route path="/newUser" element={<NewUser />} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/newproduct" element={<NewProduct />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/login"
+            element={user ? <Navigate to="/" /> : <Login />}
+          />
         </Routes>
       </div>
     </div>

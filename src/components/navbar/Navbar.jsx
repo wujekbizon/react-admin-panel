@@ -6,8 +6,20 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import LanguageIcon from '@mui/icons-material/Language';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { logout } from '../../redux/apiCalls';
+import { useDispatch } from 'react-redux';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    localStorage.clear();
+    logout(dispatch);
+    navigate('/login');
+  };
+
   return (
     <div className="topbar">
       <div className="topWrapper">
@@ -50,6 +62,9 @@ const Navbar = () => {
             <SettingsOutlinedIcon />
           </div>
           <img className="topAvatar" src={avatar} alt="" />
+          <button className="logout" onClick={handleLogout}>
+            Logout
+          </button>
         </div>
       </div>
     </div>
